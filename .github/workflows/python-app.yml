@@ -9,13 +9,10 @@ on:
   pull_request:
     branches: [ "rvv-cpu" ]
 
-permissions:
-  contents: read
-
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
 
     steps:
     - uses: actions/checkout@v3

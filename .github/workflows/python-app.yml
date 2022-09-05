@@ -19,10 +19,11 @@ jobs:
     - name: Set up Python 3
       uses: actions/setup-python@v3
       with:
-        python-version: "3.8"
+        python-version: "3.10"
     - name: Install dependencies
       run: |
-        pip install scons
+        python -m pip install --upgrade pip
+        pip install scons-3.1.2
     - name: Test
       run: |
         /usr/bin/env python3 $(which scons) build/RISCV/gem5.opt -j32
